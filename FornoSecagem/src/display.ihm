@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hmi cpu="gp1600" ihm_virtual="0" UserWebPage="0" IHM2pol="1" InputMethod="0" DisplayType="1">
+    <screens num_screens="1">
+        <screen name="Tela 0" id="0" num_lines="4">
+            <line num="0" prefix="TELA_1" suffix="" name="" type="" address=""/>
+            <line num="1" prefix="BOTAO:_" suffix="" name="BOTAO" type="BOOL" address="GLOBAL[BOTAO]" size="1"/>
+            <line num="2" prefix="S_TEMPERATURA:_" suffix="" name="S_TEMPERATURA" type="WORD" address="GLOBAL[S_TEMPERATURA]" size="2"/>
+            <line num="3" prefix="FORNO:_" suffix="" name="FORNO" type="BOOL" address="GLOBAL[FORNO]" size="1"/>
+        </screen>
+    </screens>
+</hmi>
+

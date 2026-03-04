@@ -1,0 +1,37 @@
+PROGRAM DESCRITIVA
+
+	//Liste aqui as variaveis globais que serao utilizadas
+	VAR_EXTERNAL
+		FORNO:BOOL; //SD1 ACIONAMENTO DO FORNO1
+		BOTAO:BOOL; //ED1 
+		S_TEMPERATURA:WORD; //EA1
+		
+	END_VAR
+
+   //Liste aqui as variaveis globais retentitvas que serao utilizadas
+	VAR_EXTERNAL RETAIN
+
+	END_VAR
+	
+   //Declare aqui variaveis locais destes POU
+	VAR
+
+	END_VAR
+
+// Insira aqui as rotinas
+MAQUINA FORNO1:
+ESTADO 0:
+	SE BOTAO = 1 ENTAO 1;
+ESTADO 1:
+	LIGA FORNO;
+	SE S_TEMPERATURA/20000.0 * 500.0 > 200 ENTAO 2;
+ESTADO 2:
+	DESL FORNO;
+	SE ATRASO = T#1h ENTAO 3;
+ESTADO 3:
+	MOSTRA(1,1,'FIM', '', '');
+	VA PARA 0;
+	
+	
+		
+END_PROGRAM

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configurator nomeProjeto="FORNO_SECAGEM" schemaVersion="4">
+    <cpus>
+        <cpu nomeCpu="CPU GP 322L/MX">
+            <barramentos>
+                <barramento xsi:type="gp322LBus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <slots>
+                        <slot tipoSlot="Slot 1 ESD" address="0">
+                            <ListEntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Entradas Digitais 1...8" tipoMapeamento="BOOL">
+                                    <variaveis>
+                                        <variavel nomeVar="BOTAO - BOOL" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 2" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 3" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 4" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 5" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 6" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 7" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 8" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                    </variaveis>
+                                </EntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Entradas Digitais 9...16">
+                                    <variaveis/>
+                                </EntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Saídas Digitais 1...8" tipoMapeamento="BOOL">
+                                    <variaveis>
+                                        <variavel nomeVar="FORNO - BOOL" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 2" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 3" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 4" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 5" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 6" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 7" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                        <variavel nomeVar="nomeVar 8" tipoVar="BOOL" tipoArray="false" tamArray="0"/>
+                                    </variaveis>
+                                </EntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Saídas Digitais 9...14">
+                                    <variaveis/>
+                                </EntSai>
+                            </ListEntSai>
+                        </slot>
+                        <slot tipoSlot="Slot 2 off" address="0">
+                            <ListEntSai/>
+                        </slot>
+                        <slot tipoSlot="Slot 3 off" address="0">
+                            <ListEntSai/>
+                        </slot>
+                        <slot tipoSlot="Slot 4 off" address="0">
+                            <ListEntSai/>
+                        </slot>
+                    </slots>
+                </barramento>
+            </barramentos>
+            <protocolos>
+                <protocolo xsi:type="ftp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <user username="admin" password="admin"/>
+                </protocolo>
+            </protocolos>
+            <generics xsi:type="network" networkType="Ethernet 100BaseT" ipAssignmentMethod="DHCP" sntpInterval="0" localTimezone="-11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </cpu>
+    </cpus>
+</configurator>
+
