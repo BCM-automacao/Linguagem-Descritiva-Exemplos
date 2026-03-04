@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bcmbus>
+    <bus busType="0">
+        <modules>
+            <module moduleAddr="0" moduleType="0">
+                <entrys>
+                    <entry dir="1" memAddr="GLOBAL[SD1]" size="0" bit="8"/>
+                </entrys>
+            </module>
+        </modules>
+    </bus>
+</bcmbus>
+
