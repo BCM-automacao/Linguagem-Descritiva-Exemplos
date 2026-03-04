@@ -1,0 +1,57 @@
+PROGRAM DESCRITIVA
+
+	//Liste aqui as variaveis globais que serao utilizadas
+	VAR_EXTERNAL
+		EXEMPLO_GLOBAL:UINT;
+		RSEC :UINT;
+		RMIN :UINT;
+		RHOR :UINT;
+		SD1  :BOOL;
+	END_VAR
+
+   //Liste aqui as variaveis globais retentitvas que serao utilizadas
+	VAR_EXTERNAL RETAIN
+		EXEMPLO_RETENTIVA:UINT;
+	END_VAR
+	
+   //Declare aqui variaveis locais destes POU
+	VAR
+		EXEMPLO_VAR_LOCAL:UINT;
+		RTC_INTERNO:RTC;
+	END_VAR
+	
+
+//-------------------------------------------
+// Exemplo de malha utilizando o RTC do controlador.
+//-------------------------------------------
+MALHA RELOGIO:
+ESTADO 0:
+	RTC_INTERNO(WRITE:=FALSE);
+	FACA RSEC:= RTC_INTERNO.SEC;
+	FACA RMIN:= RTC_INTERNO.^MIN;
+	FACA RHOR:= RTC_INTERNO.HOUR;
+	SE ATRASO = T#500ms ENTAO 1;
+ESTADO 1:
+	VA PARA 0;
+
+//-------------------------------------------
+// Exemplo de malha de controle.
+//-------------------------------------------
+MALHA CONTROLE1:
+ESTADO 0:
+	DESL SD1;
+	SE ATRASO = T#1s ENTAO 1;
+ESTADO 1:
+	LIGA SD1;
+	SE ATRASO = T#1s ENTAO 0;
+	
+//-------------------------------------------
+// Exemplo de malha para tratamento do MOSTRA.
+//-------------------------------------------
+MALHA TRATA_MOSTRA:
+ESTADO 0:
+	MOSTRA(1,1,'BCM Automação', '','T');
+	MOSTRA(2,1,'Valor da var: ', EXEMPLO_GLOBAL,' C','L');
+	VA PARA 1;
+		
+END_PROGRAM
