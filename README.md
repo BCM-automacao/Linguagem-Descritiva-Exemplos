@@ -15,8 +15,22 @@ A linguagem é orientada à maquinas de estados. Uma rotina pode ter diversas m�
  - LIGA/DESL: Alias para FACA var := 1 e FACA var := 0, usada para clareza em entradas e saídas digitais;
  - SET/RESET: Alias para FACA var := 1 e FACA var := 0, usada para clareza em flags;
  - INCREMENTA/DECREMENTA: Alias para FACA var := var+1 e FACA var := var-1, usada para clareza;
+### Sintaxe
+Toda Máquina deve iniciar com a palavra chave MAQUINA ou MALHA, seguida de um identificador e ':'. Caso estado deve iniciar com a palavra chave ESTADO seguida do número do estado e ':'. Toda malha deve ter um ESTADO 0, e não pode ter dois estados com o mesmo número;
+```
+MALHA EXEMPLO:
+ESTADO 0:
+    LIGA SD1;
+    DESL SD2;
+    SE ED1 ENTAO 1;
+ESTADO 1:
+    LIGA SD2;
+    DESL SD1;
+    SE ATRASO = T#1s ENTAO 0;
+```
 ### Tipos de Dados:
 São suportados todos tipos de dados da IEC61131-3
+
 ### Estrutura Geral:
 
 <img width="1311" height="496" alt="image" src="https://github.com/user-attachments/assets/4ea6477a-5dbf-40e3-b1bd-8dd0cd406a3b" />
