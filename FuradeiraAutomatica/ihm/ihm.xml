@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hmi cpu="gp1600" ihm_virtual="0" UserWebPage="0" IHM2pol="1" InputMethod="0" DisplayType="1">
+    <screens num_screens="1">
+        <screen name="Tela 0" id="0" num_lines="4">
+            <line num="0" prefix="TEMPO_FURO:_" suffix="_MS" name="TEMPO_FURO" type="UDINT" address="GLOBAL[TEMPO_FURO]" size="4"/>
+            <line num="1" prefix="BOBINA_RAPIDO:_" suffix="" name="VEL_RAP" type="BOOL" address="GLOBAL[VEL_RAP]" size="1"/>
+            <line num="2" prefix="BOBINA_LENTO:_" suffix="" name="VEL_LEN" type="BOOL" address="GLOBAL[VEL_LEN]" size="1"/>
+            <line num="3" prefix="BOBINA_RECUO:_" suffix="" name="VEL_REC" type="BOOL" address="GLOBAL[VEL_REC]" size="1"/>
+        </screen>
+    </screens>
+</hmi>
+

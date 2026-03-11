@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hmi cpu="gp1600" ihm_virtual="0" UserWebPage="0" IHM2pol="1" InputMethod="0" DisplayType="1">
+    <screens num_screens="1">
+        <screen name="Tela 0" id="0" num_lines="4">
+            <line num="0" prefix="CNTER:_" suffix="" name="CNTER" type="UDINT" address="GLOBAL[CNTER]" size="4"/>
+            <line num="1" prefix="SD1-ESTEIRA:_" suffix="" name="ESTEIRA" type="BOOL" address="GLOBAL[ESTEIRA]" size="1"/>
+            <line num="2" prefix="SD2-VALVULA:_" suffix="" name="VALVULA" type="BOOL" address="GLOBAL[VALVULA]" size="1"/>
+            <line num="3" prefix="ED1:_S._GARRAFA" suffix="" name="S_GARR" type="BOOL" address="GLOBAL[S_GARR]" size="1"/>
+        </screen>
+    </screens>
+</hmi>
+
