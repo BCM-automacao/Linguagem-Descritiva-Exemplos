@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configurator nomeProjeto="EXEMPLO_SINTAXE" schemaVersion="4">
+    <cpus>
+        <cpu nomeCpu="CPU GP 1600M">
+            <barramentos>
+                <barramento xsi:type="gp1600Bus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <slots>
+                        <slot tipoSlot="EX0M" address="0">
+                            <ListEntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Entradas digitais">
+                                    <variaveis/>
+                                </EntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Saídas Digitais">
+                                    <variaveis/>
+                                </EntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Entradas Analógicas">
+                                    <variaveis/>
+                                </EntSai>
+                                <EntSai xsi:type="defaultInputOutput" tipoEntSai="Saídas Analógicas">
+                                    <variaveis/>
+                                </EntSai>
+                            </ListEntSai>
+                        </slot>
+                        <slot tipoSlot="Slot 1 off" address="0">
+                            <ListEntSai/>
+                        </slot>
+                        <slot tipoSlot="Slot 2 off" address="0">
+                            <ListEntSai/>
+                        </slot>
+                        <slot tipoSlot="Slot 3 off" address="0">
+                            <ListEntSai/>
+                        </slot>
+                        <slot tipoSlot="Slot 4 off" address="0">
+                            <ListEntSai/>
+                        </slot>
+                    </slots>
+                </barramento>
+            </barramentos>
+            <protocolos>
+                <protocolo xsi:type="ftp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <user username="admin" password="admin"/>
+                </protocolo>
+            </protocolos>
+            <generics xsi:type="network" networkType="Ethernet 100BaseT" ipAssignmentMethod="DHCP" sntpInterval="0" localTimezone="-11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </cpu>
+    </cpus>
+</configurator>
+

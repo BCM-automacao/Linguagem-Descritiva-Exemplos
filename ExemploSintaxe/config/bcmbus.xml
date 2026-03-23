@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bcmbus>
+    <bus busType="0">
+        <modules>
+            <module moduleAddr="0" moduleType="0">
+                <entrys></entrys>
+            </module>
+        </modules>
+    </bus>
+</bcmbus>
+
